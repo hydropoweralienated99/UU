@@ -107,6 +107,23 @@
     </header>
     
     <nav> <!-- bevisst: upresist role og ingen semantisk <nav> -->
+      <ul>
+        <li><a href="#">Hjem</a></li>
+        <li><a href="#">Om oss</a></li>
+        <li>
+          <details>
+            <summary>Tjenester</summary>
+            <ul>
+              <li><a href="#">Design</li>
+              <li><a href="#">Utvikling</li>
+              <li><a href="#">Konsulent</li>
+              <li><a href="#">Kontakt</li>
+            </ul>
+
+          </details>
+        </li>
+        <li></li>
+      </ul>
       <a href="#">Hjem</a>
       <a href="#">Om oss</a>
       <div class="dropdown">
@@ -121,11 +138,8 @@
     </div>
 
     <section>
-      <p>Viktig beskjed: Les dette! Klikk her! Klikk her! Klikk her! Veldig viktig! ✨</p>
+      <h2>Viktig beskjed: Les dette! Klikk her! Klikk her! Klikk her! Veldig viktig!</h2>
     </section>
-
-    
-      
         <aside>
           <section>
             <h4>Nyheter</h4> <!-- bevisst: hopper over h1/h2/h3 -->
@@ -161,8 +175,24 @@
           <div class="card form">
             <h4>Kontakt oss</h4>
             <!-- bevisst: ingen <label> og kun placeholder, dupliserte id-er, dårlig kontrast, farge som eneste signal -->
+          <form>
+            <label>Navn:</label>
+              <input type="text" id="navn" placeholder="Kari Nordmann..." required> 
+           </label>
+           <label>
+              E-post:
+              <input type="text" id="navn" placeholder="Navn" required>
+            </label>
+            <label>
+              Tel:
+              <input type="text" id="navn" placeholder="400 00 900" required>
+            </label>
+
+            <label> 
+            <label>Melding:
+              <input type="text" id="navn" placeholder="Navn*">
             <input type="text" id="navn" placeholder="Navn*">
-            <input type="email" id="navn" placeholder="E-post*"> <!-- bevisst: duplisert id -->
+            <input type="email" id="email" placeholder="E-post*"> <!-- bevisst: duplisert id -->
             <input type="tel" placeholder="Telefon">
             <select>
               <option>Velg tema*</option>
@@ -172,7 +202,8 @@
             <textarea rows="3" placeholder="Melding..."></textarea>
             <p class="help">Felt merket med <span class="required">rød farge</span> er obligatoriske.</p>
             <p class="error">skjemaet er feil utfylt</p> <!-- bevisst: lav kontrast på feilmelding, små bokstaver -->
-            <span class="fake-submit" role="button" tabindex="5">Send</span> <!-- bevisst: span som knapp, positiv tabindex -->
+            <input type="submit" value="Send"> <!-- bevisst: span som knapp, positiv tabindex -->
+          </form> 
           </div>
 
           <div class="card weird-order">
@@ -211,10 +242,10 @@
 
     <footer>
       <!-- bevisst: kontaktinfo kun i bilde uten alt-tekst -->
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Facebook_icon.svg">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Twitter_logo.svg">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
-      <p style="font-size:10px; color:#bfbfbf">© 2025 ACME</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Facebook_icon.svg" alt="facebook ikon for lenke til facebook">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Twitter_logo.svg" alt="twitter ikon for lenke til twitter"> 
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="instagram ikon for lenke til instagram">
+      <p>© 2025 ACME</p>
     </footer>
   </body>
 </html>
